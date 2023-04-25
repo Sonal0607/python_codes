@@ -46,7 +46,7 @@ def compute_grade(score):
 #end function
 
 #main
-score = 88
+score = float(input('Enter your score >'))
 compute_grade(score)
 
 

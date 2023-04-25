@@ -10,7 +10,7 @@ display shipping cost.
 
 
 
-def shipping_rate(lbs):
+def compute_shipping_rate(lbs):
     if lbs <= 5.0:
         rate = .10
     elif lbs <= 10:
@@ -20,18 +20,18 @@ def shipping_rate(lbs):
     return rate
 
 
-def shipping_cost(lbs, rate):
-    cost = lbs * rate
+def compute_shipping_cost(lbs, rt):
+    cost = lbs * rt
     return cost
 
 #input
 
 weight = float(input('Enter weights in pounds >>'))
-rate = shipping_rate(lbs)
 
 
 #computation
-shipping_cost = shipping_rate(rate) * weight
+rate = compute_shipping_rate(weight)
+shipping_cost = compute_shipping_cost(weight,rate)
 
 
 #output
